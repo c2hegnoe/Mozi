@@ -43,17 +43,19 @@ def bevetel(a):
                 osszeg += szabad_hely_ar
 
 
-        print("Összes bevétel összege: ",osszeg, "Ft")
+    print("Összes bevétel összege: ",osszeg, "Ft")
 
 
 
-def telitettseg(nezoter):
+def kihasznaltsag(nezoter):
     foglalt_ulohelyek = 300
 
     for i in range(len(nezoter)):
         for a in range(len(nezoter[i])):
             if nezoter [i][a] == 0:
                 foglalt_ulohelyek -= 1
+    print("A terem kihasználtsága" ,round(foglalt_ulohelyek/300*100, 2), "%.")
+
 
 
 def felnott_jegyek(nezoter):
@@ -63,9 +65,11 @@ def felnott_jegyek(nezoter):
         for a in i:
             if a == 3:
                 felnott_jegyek_szama += 1
-    print(felnott_jegyek_szama)
+    print(felnott_jegyek_szama, "db teljes áru jegyet vásároltak.")
 
 
 nezoter_feltoltes()
+kihasznaltsag(Nezoter_lista)
 felnott_jegyek(Nezoter_lista)
+bevetel(Nezoter_lista)
 
