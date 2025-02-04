@@ -53,7 +53,25 @@ def bevetel(a):
     print("Összes bevétel összege: ",osszeg, "Ft")
 
 
-
+def egymasMellett(a):
+    sor = 0
+    if a == 2:
+        for i in range(len(Nezoter_lista)):
+            for j in range(len(Nezoter_lista[i])):
+                if Nezoter_lista[i][j] == 0 and Nezoter_lista[i][j-1] == 0:
+                    sor = i+1
+                    print("A(z)", sor, ". sorban van 2 hely egymás mellett.")
+                    return
+                
+    if a == 3:
+        for i in range(len(Nezoter_lista)):
+            for j in range(len(Nezoter_lista[i])):
+                if Nezoter_lista[i][j] == 0 and Nezoter_lista[i][j-1] == 0 and Nezoter_lista[i][j-2] == 0:
+                    sor = i+1
+                    print("A(z)", sor, ". sorban van 3 hely egymás mellett.")
+                    return
+                
+                
 def kihasznaltsag(nezoter):
     foglalt_ulohelyek = 300
 
