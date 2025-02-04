@@ -70,8 +70,27 @@ def egymasMellett(a):
                     sor = i+1
                     print("A(z)", sor, ". sorban van 3 hely egymás mellett.")
                     return
+
+    if a == 4:
+        for i in range(len(Nezoter_lista)):
+            for j in range(len(Nezoter_lista[i])):
+                if Nezoter_lista[i][j] == 0 and Nezoter_lista[i][j-1] == 0 and Nezoter_lista[i][j-2] == 0 and Nezoter_lista[i][j-3] == 0:
+                    sor = i+1
+                    print("A(z)", sor, ". sorban van 4 hely egymás mellett.")
+                    return
                 
+    if a == 5:
+        for i in range(len(Nezoter_lista)):
+            for j in range(len(Nezoter_lista[i])):
+                if Nezoter_lista[i][j] == 0 and Nezoter_lista[i][j-1] == 0 and Nezoter_lista[i][j-2] == 0 and Nezoter_lista[i][j-3] == 0 and Nezoter_lista[i][j-4] == 0:
+                    sor = i+1
+                    print("A(z)", sor, ". sorban van 5 hely egymás mellett.")
+                    return
                 
+    if sor == 0:
+        print("Nincs")
+        return            
+
 def kihasznaltsag(nezoter):
     foglalt_ulohelyek = 300
 
