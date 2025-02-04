@@ -1,5 +1,12 @@
 import random
 
+print("Írja be kérem, hogy hány jegyet szeretni vásárolni: ")
+a = int(input())
+
+while a < 2 or a > 5:
+    print("Legyen szíves írja be újra hány jegyet szeretne (2 és 5 között): ")
+    a = int(input())
+
 Nezoter_lista = []
 
 def nezoter_feltoltes():
