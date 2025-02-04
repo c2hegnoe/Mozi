@@ -89,7 +89,8 @@ def egymasMellett(a):
                 
     if sor == 0:
         print("Nincs")
-        return            
+        return
+                
 
 def kihasznaltsag(nezoter):
     foglalt_ulohelyek = 300
@@ -113,6 +114,7 @@ def felnott_jegyek(nezoter):
 
 
 nezoter_feltoltes()
+egymasMellett(a)
 kihasznaltsag(Nezoter_lista)
 felnott_jegyek(Nezoter_lista)
 bevetel(Nezoter_lista)
